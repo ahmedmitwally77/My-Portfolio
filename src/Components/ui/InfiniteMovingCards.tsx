@@ -7,7 +7,7 @@ import meImage from "@/imgs/me.jpg";
 export const InfiniteMovingCards = ({
   items,
   direction = "right",
-  speed = "slow",
+  speed = "normal",
   pauseOnHover = true,
   className,
 }: {
