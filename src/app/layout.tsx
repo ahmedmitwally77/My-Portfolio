@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} `}>
         <FloatingNav navItems={navItems} />
-        <main className="relative h-[10000px] bg-main-100 w-full flex flex-col justify-center items-center overflow-hidden mx-auto px-4 md:px-6 ">
+        <main className="relative h-[10000px] bg-main-100 w-full flex flex-col justify-center items-center overflow-hidden mx-auto  ">
           {children}
         </main>
       </body>

@@ -1,4 +1,5 @@
 "use client";
+//! react-lottie copy
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
@@ -29,7 +30,8 @@ export const BentoGrid = ({
   );
 };
 
-export const BentoGridItem = ({
+export const BentoGridItem = (
+  {
   className,
   title,
   description,
@@ -50,9 +52,7 @@ export const BentoGridItem = ({
 }) => {
   const leftLists = ["React.JS", "Tailwind", "Typescript"];
   const rightLists = ["Bootstrap", "Next.JS", "SASS"];
-
   const [copied, setCopied] = useState(false);
-
   const defaultOptions = {
     loop: copied,
     autoplay: copied,

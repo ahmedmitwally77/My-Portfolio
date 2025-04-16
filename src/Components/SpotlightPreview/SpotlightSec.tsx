@@ -10,7 +10,7 @@ import MagicButton from "../ui/MagicButton";
 
 export function SpotlightPreview() {
   return (
-    <div className="relative text-white flex h-full w-full overflow-hidden rounded-md  after:absolute after:opacity- after:bg-[linear-gradient(to_bottom,rgba(0,0,0,0.2),rgba(0,3,25,0.6))] after:w-full after:h-full  antialiased md:items-center justify-center">
+    <div className="relative px-2 md:px-4 text-white flex h-full w-full overflow-hidden rounded-md  after:absolute after:opacity- after:bg-[linear-gradient(to_bottom,rgba(0,0,0,0.2),rgba(0,3,25,0.6))] after:w-full after:h-full  antialiased md:items-center justify-center">
       <div
         className={cn(
           "pointer-events-none absolute inset-0 [background-size:100px_100px] select-none",
