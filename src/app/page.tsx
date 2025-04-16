@@ -1,3 +1,4 @@
+"use client";
 import Grid from "@/Components/Grid/Grid";
 import Hero from "@/Components/Hero/Hero";
 
