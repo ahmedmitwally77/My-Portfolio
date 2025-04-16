@@ -7,7 +7,7 @@ import { navItems } from "../../data";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Ahmed Portfolio",
+  title: "Ahmed Mitwally",
   description: "Modern & Minimalist Portfolio",
 };
 
