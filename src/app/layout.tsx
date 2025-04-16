@@ -3,6 +3,7 @@ import "./globals.css";
 import { FloatingNav } from "@/Components/ui/floating-navbar";
 
 import { Inter } from "next/font/google";
+import { navItems } from "../../data";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -10,12 +11,7 @@ export const metadata: Metadata = {
   description: "Modern & Minimalist Portfolio",
 };
 
-const navItems = [
-  { name: "About", link: "#about" },
-  { name: "Projects", link: "/projects" },
-  { name: "Testimonials", link: "/testimonials" },
-  { name: "Contact", link: "/contact" },
-];
+
 
 export default function RootLayout({
   children,
