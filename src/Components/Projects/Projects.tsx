@@ -5,7 +5,7 @@ import { ProjectCard } from "../ProjectCard/ProjectCard";
 export default function Projects() {
   return (
     <section id="projects" className="py-8 px-8">
-      <h3 className="heading text-center text-xl  md:text-3xl tracking-wide font-semibold font-sans">
+      <h3 className="heading text-center text-xl dark:text-white text-black  md:text-3xl tracking-wide font-semibold font-sans">
         A Small Selections of
         <span className="text-purple-300"> Recent Projects</span>
       </h3>

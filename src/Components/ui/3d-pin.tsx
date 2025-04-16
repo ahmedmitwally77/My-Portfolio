@@ -50,7 +50,7 @@ export const PinContainer = ({
           style={{
             transform: transform,
           }}
-          className="absolute left-1/2 p-4 top-1/2 flex justify-start items-start rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-black/50 border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
+          className="absolute left-1/2 p-4 top-1/2 flex justify-start items-start rounded-2xl shadow-[0_8px_16px_rgb(0_0_0/0.4)] bg-black/0 border border-white/[0.1] group-hover/pin:border-white/[0.2] transition duration-700 overflow-hidden"
         >
           <div className={cn("relative z-50 ", className)}>{children}</div>
         </div>
@@ -76,9 +76,9 @@ export const PinPerspective = ({
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative flex space-x-2 items-center z-10 rounded-full py-2 px-4 ring-1 ring-white/10"
+              className="relative flex space-x-2 items-center z-10 rounded-full py-2 px-4 ring-1 ring-black/40  dark:ring-white/10"
             >
-              <span className="relative z-20 text-white text-xs font-bold inline-block py-0.5">
+              <span className="relative z-20 dark:text-white text-black  text-xs font-bold inline-block py-0.5">
                 {title}
               </span>
               <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>

@@ -16,6 +16,7 @@ module.exports = {
           300: '#00152e',
           400: '#001d3d',
           500: '#00254c',
+          dark: '#ffffff',
         }
       },
       animation: {

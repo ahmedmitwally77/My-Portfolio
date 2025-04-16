@@ -1,5 +1,6 @@
 "use client";
 import React, { JSX, useState } from "react";
+
 import {
   motion,
   AnimatePresence,
@@ -8,6 +9,7 @@ import {
 } from "motion/react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { ModeToggle } from "../ToggleButton/ToggleButton";
 
 export const FloatingNav = ({
   navItems,
@@ -65,19 +67,24 @@ export const FloatingNav = ({
           border: "1px solid rgba(255, 255, 255, 0.125)",
         }}
       >
-        {navItems.map((navItem: { name: string; link: string; icon?: JSX.Element }, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={`${navItem.link}`}
-            className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 py-2 px-4 text-white transition-colors hover:border-white rounded-4xl hover:bg-white border-1 border-transparent duration-700 dark:hover:text-neutral-800 hover:text-black"
-            )}
-          >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-sm">{navItem.name}</span>
-          </Link>
-        ))}
-        
+        {navItems.map(
+          (
+            navItem: { name: string; link: string; icon?: JSX.Element },
+            idx: number
+          ) => (
+            <Link
+              key={`link=${idx}`}
+              href={`${navItem.link}`}
+              className={cn(
+                "relative dark:text-neutral-50 items-center flex space-x-1 py-2 px-4 text-white transition-colors hover:border-white rounded-4xl hover:bg-white border-1 border-transparent duration-700 dark:hover:text-neutral-800 hover:text-black"
+              )}
+            >
+              <span className="block sm:hidden">{navItem.icon}</span>
+              <span className="hidden sm:block text-sm">{navItem.name}</span>
+            </Link>
+          )
+        )}
+        <ModeToggle />
       </motion.div>
     </AnimatePresence>
   );

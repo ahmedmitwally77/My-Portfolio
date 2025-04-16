@@ -28,11 +28,11 @@ export function ProjectCard({
             className="w-full h-full object-cover"
           />
         </div>
-        <h3 className="max-w-xs !pb-4 !m-0 font-bold  text-base text-slate-100">
+        <h3 className="max-w-xs !pb-4 !m-0 font-bold  text-base text-slate-900 dark:text-slate-100">
           {data.title}
         </h3>
         <div className="text-base !m-0 !p-0 font-normal">
-          <span className="text-slate-500 ">{data.des}</span>
+          <span className="dark:text-slate-500  text-slate-600 ">{data.des}</span>
         </div>
 
         <div className="flex items-center justify-between mt-4 mb-3">
@@ -56,11 +56,11 @@ export function ProjectCard({
             ))}
           </div>
 
-          <div className="flex justify-center items-center bg-white text-black p-2 rounded-3xl">
+          <div className="flex justify-center items-center dark:bg-white dark:text-black bg-slate-900 text-white p-2 rounded-3xl">
             <p className="flex lg:text-md md:text-xs text-sm text-purple">
               Check Live Site
             </p>
-            <FaLocationArrow className="ms-3" color="#000" />
+            <FaLocationArrow className="ms-3 text-white dark:text-black" />
           </div>
         </div>
       </div>
