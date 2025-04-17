@@ -20,7 +20,7 @@ export default function Projects() {
             iconLists: string[];
             link: string;
           }) => (
-            <ProjectCard key={project.id} data={project}/>
+            <ProjectCard key={`project-${project.id} `} data={project}/>
           )
         )}
       </div>
