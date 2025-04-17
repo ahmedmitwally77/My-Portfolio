@@ -4,6 +4,7 @@ import Projects from "../Projects/Projects";
 import Hero from "../Hero/Hero";
 import Testimonials from "../Testimonials/Testimonials";
 import Experience from "../Experience/Experience";
+import Approach from "../Approach/Approach";
 
 const Grid = dynamic(() => import("@/Components/Grid/Grid"), { ssr: false });
 
@@ -15,6 +16,7 @@ export default function HomeClient() {
       <Projects/>
       <Testimonials/>
       <Experience/>
+      <Approach/>
     </div>
   );
 }
