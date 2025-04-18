@@ -38,8 +38,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <FloatingNav navItems={navItems} />
-          <main className="relative  dark:bg-main-100 w-full dark:text-white text-black flex flex-col justify-center items-center overflow-hidden mx-auto  ">
+          <FloatingNav navItems={navItems}  />
+          <main className="relative  dark:bg-main-100  w-full dark:text-white text-black flex flex-col justify-center items-center overflow-hidden mx-auto  ">
             {children}
           </main>
         </ThemeProvider>
