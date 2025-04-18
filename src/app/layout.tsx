@@ -39,8 +39,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <FloatingNav navItems={navItems}  />
+          
           <main className="relative  dark:bg-main-100  w-full dark:text-white text-black flex flex-col justify-center items-center overflow-hidden mx-auto  ">
             {children}
+
           </main>
         </ThemeProvider>
       </body>
