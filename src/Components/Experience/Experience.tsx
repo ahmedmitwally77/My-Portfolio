@@ -2,13 +2,14 @@ import React from "react";
 import { workExperience } from "../../../data";
 import { BorderButton } from "../ui/MovingBorder";
 import Image from "next/image";
+import MainHeading from "../MainHeading/MainHeading";
 
 export default function Experience() {
   return (
     <section id="experience" className="py-8 px-4  md:px-8">
       <h3 className="heading text-center text-xl dark:text-white text-black  md:text-3xl tracking-wide font-semibold font-sans">
         My
-        <span className="text-purple-300"> Work Experience</span>
+        <MainHeading title="Work Experience" />
       </h3>
 
       <div className="cards md:w-4/5 mx-auto mt-12 grid justify-center md:grid-cols-2 grid-cols-1 gap-8">
