@@ -1,6 +1,6 @@
 import React from "react";
 import { FaLocationArrow } from "react-icons/fa6";
-import { cn } from "@/lib/utils";
+// import { cn } from "@/lib/utils";
 import { Spotlight } from "../ui/Spotlight";
 import Image from "next/image";
 import meImage from "@/imgs/me.jpg";
@@ -10,14 +10,15 @@ import MagicButton from "../ui/MagicButton";
 
 export function SpotlightPreview() {
   return (
-    <div 
-    className="relative px-2 md:px-4 dark:text-white text-black flex h-full w-full overflow-hidden rounded-md  after:absolute dark:after:bg-[linear-gradient(to_bottom,rgba(0,0,0,0.2),rgba(0,3,25,0.6))] after:w-full after:h-full  antialiased md:items-center justify-center"
+    <div
+      // className="relative px-2 md:px-4 dark:text-white text-black flex h-full w-full overflow-hidden rounded-md  after:absolute dark:after:bg-[linear-gradient(to_bottom,rgba(0,0,0,0.2),rgba(0,3,25,0.6))] after:w-full after:h-full  antialiased md:items-center justify-center"
+      className="relative px-2 md:px-4 dark:text-white text-black flex h-full w-full overflow-hidden rounded-md   antialiased md:items-center justify-center"
     >
       <div
-        className={cn(
-          "pointer-events-none absolute inset-0 [background-size:100px_100px] select-none",
-          "dark:[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]"
-        )}
+      // className={cn(
+      //   "pointer-events-none absolute inset-0 [background-size:100px_100px] select-none",
+      //   "dark:[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]"
+      // )}
       />
 
       <Spotlight
@@ -53,10 +54,12 @@ export function SpotlightPreview() {
           Dynamic Web Magic with Next.js
         </p>
 
-        <a className="mt-4 ">
-          <MagicButton title="Show my work"
-              icon={<FaLocationArrow />}
-              position="right"/>
+        <a className="mt-4 " href="#projects">
+          <MagicButton
+            title="Show my work"
+            icon={<FaLocationArrow />}
+            position="right"
+          />
         </a>
       </div>
     </div>

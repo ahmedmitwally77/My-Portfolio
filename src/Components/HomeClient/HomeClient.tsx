@@ -6,10 +6,42 @@ import Testimonials from "../Testimonials/Testimonials";
 import Experience from "../Experience/Experience";
 import Approach from "../Approach/Approach";
 import Footer from "../Footer/Footer";
+import { ShootingStars } from "../ui/shooting-stars";
+import { StarsBackground } from "../ui/stars-background";
+import { useEffect, useState } from "react";
+import WelcomeScreen from "../WelcomePage/WelcomePage";
 
 const Grid = dynamic(() => import("@/Components/Grid/Grid"), { ssr: false });
 
 export default function HomeClient() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+      setInterval(() => {
+        setLoading(false);
+      }, 5000);
+    };
+
+    if (document.readyState === "complete") {
+      // لو الصفحة كلها محملة خلاص
+      handleLoad();
+    } else {
+      // لو لسه في تحميل، استنى الحدث
+      window.addEventListener("load", handleLoad);
+    }
+
+    return () => window.removeEventListener("load", handleLoad);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-screen w-full flex-col gap-4">
+        <WelcomeScreen />
+      </div>
+    );
+  }
+
   return (
     <div className="w-full h-full text-white">
       <Hero />
@@ -19,6 +51,8 @@ export default function HomeClient() {
       <Experience />
       <Approach />
       <Footer />
+      <ShootingStars />
+      <StarsBackground />
     </div>
   );
 }
