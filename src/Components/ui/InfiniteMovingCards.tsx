@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import meImage from "@/imgs/me.jpg";
+import { Star } from "lucide-react";
 
 export const InfiniteMovingCards = ({
   items,
@@ -15,6 +16,7 @@ export const InfiniteMovingCards = ({
     quote: string;
     name: string;
     title: string;
+    stars: number;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -100,7 +102,7 @@ export const InfiniteMovingCards = ({
                 {item.quote}
               </span>
               <div className="relative z-20 mt-6 flex flex-row items-center">
-                <span className="flex justify-center items-center  gap-3">
+                <span className="flex justify-center items-center  gap-3 w-full">
                   <Image
                     src={meImage}
                     width={50}
@@ -108,9 +110,21 @@ export const InfiniteMovingCards = ({
                     alt={item.name}
                     className="rounded-full w-15 h-15 object-cover"
                   />
-                  <div className="flex flex-col gap-1">
-                    <span className="text-md leading-[1.6] text-black/60  dark:text-gray-400 font-bold">
-                      {item.name}
+                  <div className="flex flex-col gap-1 w-full">
+                    <span className="flex flex-col md:flex-row md:items-center gap-2 justify-between">
+                      <span className="text-md leading-[1.6] text-black/60  dark:text-gray-400 font-bold">
+                        {item.name}
+                      </span>
+                      <span className="text-md leading-[1.6] text-black/60 flex gap-1  dark:text-gray-400">
+                        {Array.from({ length: item.stars }).map((_, index) => (
+                          <Star key={index}  color="#FFD700" fill="#FFD700" strokeWidth={0}  />
+                        ))}
+                        {Array.from({ length: 5 - item.stars }).map((_, index) => (
+                          <Star
+                            key={`${index} ${item.stars}`}
+                          />
+                        ))}
+                      </span>
                     </span>
                     <span className="text-md leading-[1.6] font-normal text-black/50 dark:text-gray-400">
                       {item.title}

@@ -76,7 +76,7 @@ export const BentoGridItem = (
       id={id.toString()}
       className={cn(
         // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
-        "row-span-1  text-white relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
+        "row-span-1 z-10  text-white relative overflow-hidden rounded-3xl border border-white/[0.1] group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none justify-between flex flex-col space-y-4",
         className
       )}
       style={{
@@ -96,7 +96,7 @@ export const BentoGridItem = (
           {img && (
             <Image
               src={img}
-              alt={img}
+              alt={`${img}`}
               className={cn(
                 imgClassName,
                 "object-cover object-center w-full h-full"
@@ -200,7 +200,7 @@ export const BentoGridItem = (
             icon={<IoCopyOutline />}
             position="left"
             handleClick={handleCopy}
-            otherClasses="dark:!bg-[#161A31] "
+            otherClasses="dark:!bg-[#161A31] cursor-pointer"
           />
         </div>
       )}

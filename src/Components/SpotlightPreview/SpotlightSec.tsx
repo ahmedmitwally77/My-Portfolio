@@ -7,6 +7,8 @@ import meImage from "@/imgs/me.jpg";
 import HeroTyping from "../HeroTypeing/HeroTypeing";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import MagicButton from "../ui/MagicButton";
+import { RiFolderUserLine } from "react-icons/ri";
+
 
 export function SpotlightPreview() {
   return (
@@ -54,13 +56,23 @@ export function SpotlightPreview() {
           Dynamic Web Magic with Next.js
         </p>
 
-        <a className="mt-4 " href="#projects">
-          <MagicButton
-            title="Show my work"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
+        <div className="flex flex-col md:flex-row gap-4 mt-8 md:mt-4">
+          <a  href="#projects">
+            <MagicButton
+              title="Show my work"
+              icon={<FaLocationArrow />}
+              position="right"
+            />
+          </a>
+
+          <a  href="https://drive.google.com/uc?export=download&id=1HStSBYUIZ_dgB7XM0cgO9AECSRekjUm_"  target="_blank" download="Ahmed Mitwally CV">
+            <MagicButton
+              title="Download CV"
+              icon={ <RiFolderUserLine />}
+              position="right"
+            />
+          </a>
+        </div>
       </div>
     </div>
   );

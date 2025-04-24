@@ -9,7 +9,7 @@ export default function Approach() {
         My
         <MainHeading title="Approach" />
       </h3>
-      <CanvasRevealEffectDemo/>
+      <CanvasRevealEffectDemo />
     </section>
   );
 }

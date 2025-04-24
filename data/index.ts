@@ -1,3 +1,16 @@
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiMui,
+  SiVite,
+  SiSass ,
+  SiJquery,
+  SiRedux  
+} from "react-icons/si";
+import { FaReact, FaJs,FaCss3Alt,FaHtml5 ,FaBootstrap   } from "react-icons/fa";
+import { VscVscode } from "react-icons/vsc";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
@@ -72,36 +85,54 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "ICPC-HTI-Community Website",
+    des: "The ICPC HTI Community Platform is an online learning system designed to enhance problem-solving skills for university students at the Higher Technological Institute (HTI).",
+    img: "/icpc_hti_community.webp",
+    iconLists: [FaReact, SiTailwindcss, FaJs, SiVite],
+    link: "https://github.com/ahmedmitwally77/ICPC-HTI-Community",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    title: "Social Media App",
+    des: "Social Media App is a modern social platform built with Next.js, Tailwind CSS, and Material UI (MUI). The app allows users to create, view, and interact with posts seamlessly. It features: Comment System – Users can add and view comments. User Profiles – View and manage personal profiles. Skeleton Loading – Enhances user experience",
+    img: "/social_app_portfolio.webp",
+    iconLists: [SiNextdotjs, SiTailwindcss, SiTypescript, SiMui],
+    link: "https://github.com/ahmedmitwally77/Social-App",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    title: "Movie App",
+    des: "A modern and fully responsive movie browsing application that allows users to explore movies, view actor details, and discover trending films. The app provides an intuitive user experience with dynamic search functionality, detailed movie pages, and a smooth UI design.",
+    img: "/movie-app.webp",
+    iconLists: [FaReact, SiTailwindcss, FaJs, SiJquery ,FaCss3Alt],
+    link: "https://github.com/ahmedmitwally77/Movies-App",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    title: "FreshCart E-Commerce", 
+    des: "FreshCart is a modern e-commerce web application designed to streamline the online shopping experience. From browsing and purchasing to managing orders, this platform leverages the latest technologies to deliver a seamless and intuitive user experience.",
+    img: "/freshcart_portfolio.webp",
+    iconLists: [FaReact, SiTypescript,SiTailwindcss, SiSass,SiRedux],
+    link: "https://github.com/ahmedmitwally77/freshcart",
   },
+  {
+    id: 5,
+    title: "VsCode Clone", 
+    des: "A fully responsive web-based clone of the Visual Studio Code editor, built with React, Redux Toolkit, and Tailwind CSS. This project mimics the look and feel of the real VS Code.",
+    img: "/vscode-clone.webp",
+    iconLists: [FaReact, SiTypescript,SiTailwindcss,SiRedux,VscVscode],
+    link: "https://github.com/ahmedmitwally77/VS-Code-Clone",
+  },
+  {
+    id: 6,
+    title: "Yummy", 
+    des: "Is a simple and easy to use website about recipes of most meals. You can find meals by categories , specific area and ingredients. This website is made with HTML,CSS,J.S,JQuery,Bootstrap.The website is responsive on all devices.",
+    img: "/yummy.webp",
+    iconLists: [FaHtml5, FaCss3Alt,FaJs,FaBootstrap],
+    link: "https://github.com/ahmedmitwally77/Yummy",
+  },
+  
+
 ];
 
 export const testimonials = [
@@ -109,66 +140,71 @@ export const testimonials = [
     quote:
       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson",
+    stars: 4,
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson2",
+    stars: 3,
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson3",
+    stars: 5,
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson4",
+    stars: 3,
     title: "Director of AlphaStream Technologies",
   },
   {
     quote:
       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
     name: "Michael Johnson5",
+    stars: 4,
     title: "Director of AlphaStream Technologies",
   },
 ];
 
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
-];
+// export const companies = [
+//   {
+//     id: 1,
+//     name: "cloudinary",
+//     img: "/cloud.svg",
+//     nameImg: "/cloudName.svg",
+//   },
+//   {
+//     id: 2,
+//     name: "appwrite",
+//     img: "/app.svg",
+//     nameImg: "/appName.svg",
+//   },
+//   {
+//     id: 3,
+//     name: "HOSTINGER",
+//     img: "/host.svg",
+//     nameImg: "/hostName.svg",
+//   },
+//   {
+//     id: 4,
+//     name: "stream",
+//     img: "/s.svg",
+//     nameImg: "/streamName.svg",
+//   },
+//   {
+//     id: 5,
+//     name: "docker.",
+//     img: "/dock.svg",
+//     nameImg: "/dockerName.svg",
+//   },
+// ];
 
 export const workExperience = [
   {

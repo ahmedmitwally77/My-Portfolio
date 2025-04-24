@@ -10,7 +10,7 @@ import { socialMedia } from "../../../data";
 const Footer = () => {
   return (
     <footer
-      className="md:w-3/4 px-2 md:px-0 mx-auto pt-20 pb-10"
+      className="md:w-3/4 relative z-10 px-2 md:px-0 mx-auto pt-20 pb-10"
       id="contact"
       style={{
         backgroundImage: "url(/footer-grid.svg)",
@@ -52,7 +52,7 @@ const Footer = () => {
               className="w-10 h-10 cursor-pointer flex  justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
               {info.id === 1 && (
-                <FaLinkedin className="w-5 h-5 dark:text-white text-black hover:text-blue-600 dark:hover:text-blue-600 transition" />
+                <FaLinkedin className="w-5 h-5 dark:text-white text-black hover:text-blue-600 dark:hover:text-blue-500 transition" />
               )}
               {info.id === 2 && (
                 <FaGithub className="w-5 h-5 dark:text-white text-black hover:text-gray-600 dark:hover:text-gray-600 transition" />

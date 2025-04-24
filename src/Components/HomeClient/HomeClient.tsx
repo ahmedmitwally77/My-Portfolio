@@ -18,9 +18,9 @@ export default function HomeClient() {
 
   useEffect(() => {
     const handleLoad = () => {
-      setInterval(() => {
+      setTimeout(() => {
         setLoading(false);
-      }, 5000);
+      }, 3000);
     };
 
     if (document.readyState === "complete") {

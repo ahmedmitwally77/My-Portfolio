@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${inter.className} relative `}>
+      <body className={`${inter.className} relative`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="dark" // تغيير من "system" إلى "dark"
@@ -38,7 +38,6 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <FloatingNav navItems={navItems} />
-
           <main className="relative  dark:bg-main-100  w-full dark:text-white text-black flex flex-col justify-center items-center overflow-hidden mx-auto  ">
             {children}
           </main>

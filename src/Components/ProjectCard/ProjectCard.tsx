@@ -12,46 +12,40 @@ export function ProjectCard({
     title: string;
     des: string;
     img: string;
-    iconLists: string[];
+    iconLists: React.ComponentType[]; // أو IconType[]
     link: string;
   };
 }) {
   return (
     <PinContainer title={data.title} href={data.link}>
-      <div className="flex basis-full flex-col   tracking-tight text-slate-100/50 sm:basis-1/2 md:w-[22rem] md:h-[26rem] w-[20rem] h-[24rem] ">
-        <div className="flex w-full rounded-lg mb-4">
+      <div className="flex basis-full flex-col tracking-tight text-slate-100/50 sm:basis-1/2 md:w-[22rem] md:h-[29rem] w-[20rem] h-[29rem]">
+        <div className="flex w-full justify-center items-center rounded-lg mb-4">
           <Image
             src={data.img}
             alt={data.title}
-            width={0}
-            height={0}
-            className="w-full h-full object-cover"
+            width={300}
+            height={200}
+            className="w-full h-[250px] object-cover self-center object-center"
           />
         </div>
-        <h3 className="max-w-xs !pb-4 !m-0 font-bold  text-base text-slate-900 dark:text-slate-100">
+        <h3 className="max-w-xs !pb-4 !m-0 font-bold text-base text-slate-900 dark:text-slate-100">
           {data.title}
         </h3>
         <div className="text-base !m-0 !p-0 font-normal">
-          <span className="dark:text-slate-500  text-slate-600 ">{data.des}</span>
+          <span className="dark:text-slate-500 text-slate-600 line-clamp-4 md:line-clamp-4">
+            {data.des}
+          </span>
         </div>
 
         <div className="flex items-center justify-between mt-4 mb-3">
           <div className="flex items-center">
-            {data.iconLists.map((icon, index) => (
+            {data.iconLists.map((Icon, index) => (
               <div
                 key={index}
-                className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
-                style={{
-                  transform: `translateX(-${10 * index + 2}px)`,
-                }}
+                className="border border-white/[.2] rounded-full bg-black text-xl lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
+                style={{ transform: `translateX(-${10 * index + 2}px)` }}
               >
-                <Image
-                  src={icon}
-                  width={0}
-                  height={0}
-                  alt={icon}
-                  className="p-2 w-full h-full"
-                />
+                <Icon />
               </div>
             ))}
           </div>

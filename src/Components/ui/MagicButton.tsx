@@ -30,9 +30,9 @@ const MagicButton = ({
                     dark:bg-slate-950 bg-white  px-7 text-sm font-medium dark:text-white text-black backdrop-blur-3xl gap-2 
                     transition-colors duration-300 dark:hover:bg-slate-800 hover:bg-slate-200 ${otherClasses}`}
       >
-        {position === "left" && <span className="mt-1">{icon}</span>}
+        {position === "left" && <span className="text-xl">{icon}</span>}
         {title}
-        {position === "right" && <span className="mt-1">{icon}</span>}
+        {position === "right" && <span className="text-xl">{icon}</span>}
       </span>
     </button>
   );
