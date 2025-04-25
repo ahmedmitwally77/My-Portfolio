@@ -10,6 +10,7 @@ import { ShootingStars } from "../ui/shooting-stars";
 import { StarsBackground } from "../ui/stars-background";
 import { useEffect, useState } from "react";
 import WelcomeScreen from "../WelcomePage/WelcomePage";
+import { TimelineResume } from "../Resume/Resume";
 
 const Grid = dynamic(() => import("@/Components/Grid/Grid"), { ssr: false });
 
@@ -48,6 +49,7 @@ export default function HomeClient() {
       <Grid />
       <Projects />
       <Testimonials />
+      <TimelineResume/>
       <Experience />
       <Approach />
       <Footer />

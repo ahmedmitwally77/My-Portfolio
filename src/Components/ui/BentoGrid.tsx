@@ -200,7 +200,7 @@ export const BentoGridItem = (
             icon={<IoCopyOutline />}
             position="left"
             handleClick={handleCopy}
-            otherClasses="dark:!bg-[#161A31] cursor-pointer"
+            otherClasses="dark:!bg-[#161A31] cursor-pointer !py-2"
           />
         </div>
       )}
