@@ -6,7 +6,7 @@ import MainHeading from "../MainHeading/MainHeading";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-8 px-4  md:px-8">
+    <section id="experience" className="md:py-20 py-12 px-4  md:px-8">
       <h3 className="heading text-center text-xl dark:text-white text-black  md:text-3xl tracking-wide font-semibold font-sans">
         My
         <MainHeading title="Work Experience" />

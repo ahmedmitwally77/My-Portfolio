@@ -48,8 +48,8 @@ export default function HomeClient() {
       <Hero />
       <Grid />
       <Projects />
-      <Testimonials />
       <TimelineResume/>
+      <Testimonials />
       <Experience />
       <Approach />
       <Footer />
