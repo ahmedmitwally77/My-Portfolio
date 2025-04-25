@@ -45,16 +45,18 @@ export default function HomeClient() {
 
   return (
     <div className="w-full h-full text-white">
-      <Hero />
-      <Grid />
-      <Projects />
-      <TimelineResume/>
-      <Testimonials />
-      <Experience />
-      <Approach />
-      <Footer />
-      <ShootingStars />
-      <StarsBackground />
+      <div className="relative z-[5]">
+        <Hero />
+        <Grid />
+        <Projects />
+        <TimelineResume />
+        <Testimonials />
+        <Experience />
+        <Approach />
+        <Footer />
+      </div>
+        <ShootingStars />
+        <StarsBackground />
     </div>
   );
 }

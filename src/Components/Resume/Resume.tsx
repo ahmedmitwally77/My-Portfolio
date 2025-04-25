@@ -36,7 +36,7 @@ export function TimelineResume() {
               <Cover>ICPC Participant</Cover>
             </h4>
             <span className="text-sm text-blue-400 py-1"> Aug 2024</span>
-            <p className="text-lg font-semibold">ICPC 2024</p>
+            <p className="text-lg font-semibold">Egyptian Collegiate Programming Contest in ALX</p>
           </div>
         </div>
       ),
@@ -51,11 +51,12 @@ export function TimelineResume() {
             </h4>
             <span className="text-sm text-blue-400 py-1">
               {" "}
-              oct 2022 - Oct 2026
+              Oct 2022 - Oct 2026
             </span>
             <p className="text-lg font-semibold">
-              Higher Technological Institute
+              Higher Technological Institute 
             </p>
+            <span className="text-sm text-gray-400">10th of Ramadan City</span>
           </div>
         </div>
       ),
