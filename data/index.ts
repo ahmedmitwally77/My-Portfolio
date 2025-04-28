@@ -144,11 +144,27 @@ export const testimonials = [
   },
   {
     quote:
+      "Working with Ahmed has been a fantastic experience. He is truly one of the best! When it comes to leadership, he is absolutely top-notch. His ability to organize and structure everything is remarkable. If he ever considers pursuing a leadership role, I highly recommend it—he has all the qualities of a great leader. His communication skills, organization, and ability to create engaging content are outstanding. ",
+    name: "Ahmed Hassan",
+    stars: 5,
+    img: "ahasan.webp",
+    title: "AI & NLP Engineer",
+  },
+  {
+    quote:
       "Ahmed’s dedication to both his academic and professional growth is truly impressive. He has a solid foundation in front-end technologies and a remarkable ability to tackle and solve challenging problems. Definitely someone you can rely on for high-quality work!",
     name: "Mahmoud Youssef",
     img: "myousef.webp",
     stars: 3,
     title: "Soc Analyst",
+  },
+  {
+    quote:
+      "خلال دراستنا مع بعض في الكلية، كان أحمد دايمًا من الناس اللي تلاحظهم بسهولة بسبب اجتهاده وتفوقه. متميز جدًا في المواد العملية والنظرية، وعنده قدرة رائعة إنه يربط بين المعلومات الأكاديمية والتطبيق العملي. أحمد مش بس بيذاكر لنفسه، كان دايمًا بيحب يساعد زملاؤه ويوضح لهم المفاهيم الصعبة بطريقة بسيطة ومفهومة. إنسان محترم وطموح ومجتهد جدًا، وبدون مبالغة، مستقبله مبشر جدًا.",
+    name: "Ahmed Omara",
+    stars: 5,
+    img: "michael.webp",
+    title: "Frontend Developer",
   },
   {
     quote:
@@ -169,26 +185,10 @@ export const testimonials = [
   {
     quote:
       "أحمد من الناس اللي تفتخر تشتغل معاهم. اشتغلنا مع بعض في مشروع تخرج الكورس، وكان دوره حيوي جدًا في إنجاح المشروع. عنده خبرة قوية في كل أدوات وتقنيات تطوير الواجهات الأمامية، بالإضافة لحبه لحل المشكلات وتحسين الأداء. حتى تحت الضغط ومع ضيق الوقت، كان دايمًا هادي ومنظم، وبيعرف يطلع شغل متقن بجودة عالية. كمان كان دايمًا بيشجع الفريق وبيشارك معلوماته مع الكل، وده ساعدنا ننجز شغلنا بروح جماعية ممتازة. بدون شك، أحمد من أفضل الناس اللي ممكن تعتمد عليهم",
-    name: "Tarek Mohamed",
+    name: "Ahmed Shoaib",
     stars: 4,
-    img: "michael.webp",
-    title: "Full Stack Developer",
-  },
-  {
-    quote:
-      "خلال دراستنا مع بعض في الكلية، كان أحمد دايمًا من الناس اللي تلاحظهم بسهولة بسبب اجتهاده وتفوقه. متميز جدًا في المواد العملية والنظرية، وعنده قدرة رائعة إنه يربط بين المعلومات الأكاديمية والتطبيق العملي. أحمد مش بس بيذاكر لنفسه، كان دايمًا بيحب يساعد زملاؤه ويوضح لهم المفاهيم الصعبة بطريقة بسيطة ومفهومة. إنسان محترم وطموح ومجتهد جدًا، وبدون مبالغة، مستقبله مبشر جدًا.",
-    name: "Ahmed Omara",
-    stars: 5,
-    img: "michael.webp",
-    title: "Frontend Developer",
-  },
-  {
-    quote:
-    "على مدار دراستنا الجامعية، أحمد كان نموذج للطالب المجتهد والمتطور. مش بيكتفي بالمطلوب، دايمًا بيحب يعرف أكتر ويدور على معلومات إضافية، وعنده حب للبحث وحل المشكلات المعقدة. شخصيته القيادية وروحه الطموحة كانت بتأثر بشكل إيجابي على كل اللي حواليه. أحمد مثال رائع للطموح والاحترافية في المجال الأكاديمي",
-    name: "Ahmed Hassan",
-    stars: 3,
-    img: "michael.webp",
-    title: "Data Analyst",
+    img: "sohib.webp",
+    title: "Data Scientist",
   },
 ];
 
