@@ -4,11 +4,11 @@ import {
   SiTypescript,
   SiMui,
   SiVite,
-  SiSass ,
+  SiSass,
   SiJquery,
-  SiRedux  
+  SiRedux,
 } from "react-icons/si";
-import { FaReact, FaJs,FaCss3Alt,FaHtml5 ,FaBootstrap   } from "react-icons/fa";
+import { FaReact, FaJs, FaCss3Alt, FaHtml5, FaBootstrap } from "react-icons/fa";
 import { VscVscode } from "react-icons/vsc";
 
 export const navItems = [
@@ -104,72 +104,91 @@ export const projects = [
     title: "Movie App",
     des: "A modern and fully responsive movie browsing application that allows users to explore movies, view actor details, and discover trending films. The app provides an intuitive user experience with dynamic search functionality, detailed movie pages, and a smooth UI design.",
     img: "/movie-app.webp",
-    iconLists: [FaReact, SiTailwindcss, FaJs, SiJquery ,FaCss3Alt],
+    iconLists: [FaReact, SiTailwindcss, FaJs, SiJquery, FaCss3Alt],
     link: "https://github.com/ahmedmitwally77/Movies-App",
   },
   {
     id: 4,
-    title: "FreshCart E-Commerce", 
+    title: "FreshCart E-Commerce",
     des: "FreshCart is a modern e-commerce web application designed to streamline the online shopping experience. From browsing and purchasing to managing orders, this platform leverages the latest technologies to deliver a seamless and intuitive user experience.",
     img: "/freshcart_portfolio.webp",
-    iconLists: [FaReact, SiTypescript,SiTailwindcss, SiSass,SiRedux],
+    iconLists: [FaReact, SiTypescript, SiTailwindcss, SiSass, SiRedux],
     link: "https://github.com/ahmedmitwally77/freshcart",
   },
   {
     id: 5,
-    title: "VsCode Clone", 
+    title: "VsCode Clone",
     des: "A fully responsive web-based clone of the Visual Studio Code editor, built with React, Redux Toolkit, and Tailwind CSS. This project mimics the look and feel of the real VS Code.",
     img: "/vscode-clone.webp",
-    iconLists: [FaReact, SiTypescript,SiTailwindcss,SiRedux,VscVscode],
+    iconLists: [FaReact, SiTypescript, SiTailwindcss, SiRedux, VscVscode],
     link: "https://github.com/ahmedmitwally77/VS-Code-Clone",
   },
   {
     id: 6,
-    title: "Yummy", 
+    title: "Yummy",
     des: "Is a simple and easy to use website about recipes of most meals. You can find meals by categories , specific area and ingredients. This website is made with HTML,CSS,J.S,JQuery,Bootstrap.The website is responsive on all devices.",
     img: "/yummy.webp",
-    iconLists: [FaHtml5, FaCss3Alt,FaJs,FaBootstrap],
+    iconLists: [FaHtml5, FaCss3Alt, FaJs, FaBootstrap],
     link: "https://github.com/ahmedmitwally77/Yummy",
   },
-  
-
 ];
 
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
+      "Ahmed is an outstanding front-end developer with a strong eye for detail and design. His passion for creating responsive, user-friendly interfaces truly stands out. Beyond coding, Ahmed is highly skilled in problem-solving and consistently demonstrates deep understanding in his computer science studies. Working with him is always inspiring!",
+    name: "Zeiad Belal",
+    img: "noby.webp",
     stars: 4,
-    title: "Director of AlphaStream Technologies",
+    title: "Data Scientist",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson2",
+      "Ahmed’s dedication to both his academic and professional growth is truly impressive. He has a solid foundation in front-end technologies and a remarkable ability to tackle and solve challenging problems. Definitely someone you can rely on for high-quality work!",
+    name: "Mahmoud Youssef",
+    img: "myousef.webp",
     stars: 3,
-    title: "Director of AlphaStream Technologies",
+    title: "Soc Analyst",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson3",
+      "تعاملت مع أحمد خلال مشروع مهم جدًا أثناء الكورس، ومن خلال التجربة دي شفت فيه مميزات نادرة. عنده إتقان شديد للتفاصيل، وحب للتعلم والتطور باستمرار. لما كانت تواجهنا مشكلة سواء في الكود أو في تنسيق التصميمات، كان دايمًا بيكون أول واحد يقترح حلول عملية ومبتكرة. شخص محترم، طموح، ومكسب لأي تيم يشتغل معاه سواء في الدراسة أو في الشغل.",
+    name: "Mohamed Tarek",
+    img: "mtarek.webp",
     stars: 5,
-    title: "Director of AlphaStream Technologies",
+    title: "Backend Developer",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson4",
-    stars: 3,
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson5",
+      "أنا فخور إني اشتغلت مع أحمد خلال مشروعنا في الكلية. إنسان ملتزم ومجتهد بدرجة كبيرة، دايمًا حريص إنه يقدم أفضل حاجة ممكنة مهما كانت التحديات. يتمتع بقدرات قوية جدًا في حل المشكلات ومهارات عالية في استخدام تقنيات الفرونت إند الحديثة. أحمد دايمًا بيحط لمسة مميزة على أي شغل بيعمله، وبيعرف يضيف للمشروع قيمة حقيقية بتفكيره الإبداعي وسرعة تنفيذه",
+    name: "Ehab Mamdouh",
+    img: "ehab.webp",
     stars: 4,
-    title: "Director of AlphaStream Technologies",
+    title: "Red Hat OpenShift Developer",
+  },
+  {
+    quote:
+      "أحمد من الناس اللي تفتخر تشتغل معاهم. اشتغلنا مع بعض في مشروع تخرج الكورس، وكان دوره حيوي جدًا في إنجاح المشروع. عنده خبرة قوية في كل أدوات وتقنيات تطوير الواجهات الأمامية، بالإضافة لحبه لحل المشكلات وتحسين الأداء. حتى تحت الضغط ومع ضيق الوقت، كان دايمًا هادي ومنظم، وبيعرف يطلع شغل متقن بجودة عالية. كمان كان دايمًا بيشجع الفريق وبيشارك معلوماته مع الكل، وده ساعدنا ننجز شغلنا بروح جماعية ممتازة. بدون شك، أحمد من أفضل الناس اللي ممكن تعتمد عليهم",
+    name: "Tarek Mohamed",
+    stars: 4,
+    img: "michael.webp",
+    title: "Full Stack Developer",
+  },
+  {
+    quote:
+      "خلال دراستنا مع بعض في الكلية، كان أحمد دايمًا من الناس اللي تلاحظهم بسهولة بسبب اجتهاده وتفوقه. متميز جدًا في المواد العملية والنظرية، وعنده قدرة رائعة إنه يربط بين المعلومات الأكاديمية والتطبيق العملي. أحمد مش بس بيذاكر لنفسه، كان دايمًا بيحب يساعد زملاؤه ويوضح لهم المفاهيم الصعبة بطريقة بسيطة ومفهومة. إنسان محترم وطموح ومجتهد جدًا، وبدون مبالغة، مستقبله مبشر جدًا.",
+    name: "Ahmed Omara",
+    stars: 5,
+    img: "michael.webp",
+    title: "Frontend Developer",
+  },
+  {
+    quote:
+    "على مدار دراستنا الجامعية، أحمد كان نموذج للطالب المجتهد والمتطور. مش بيكتفي بالمطلوب، دايمًا بيحب يعرف أكتر ويدور على معلومات إضافية، وعنده حب للبحث وحل المشكلات المعقدة. شخصيته القيادية وروحه الطموحة كانت بتأثر بشكل إيجابي على كل اللي حواليه. أحمد مثال رائع للطموح والاحترافية في المجال الأكاديمي",
+    name: "Ahmed Hassan",
+    stars: 3,
+    img: "michael.webp",
+    title: "Data Analyst",
   },
 ];
 

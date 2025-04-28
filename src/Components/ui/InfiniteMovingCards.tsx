@@ -1,8 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { cn } from "@/lib/utils";
-import Image from "next/image";
+// import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import meImage from "@/imgs/me.jpg";
+// import meImage from "@/imgs/me.jpg";
 import { Star } from "lucide-react";
 
 export const InfiniteMovingCards = ({
@@ -13,6 +14,7 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
+    img: string;
     quote: string;
     name: string;
     title: string;
@@ -90,7 +92,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <li
-            className="relative w-[80vw] max-w-full shrink-0 rounded-2xl border  shadow-md dark:bg-[#04071d] dark:bg-gradient-to-r from-[#04071d] to-[#0c0e23]  p-5 md:p-8 md:w-[40vw]  dark:border-zinc-700 "
+            className="relative w-[80vw] md:pb-28 pb-32 max-w-full shrink-0 rounded-2xl border  shadow-md dark:bg-[#04071d] dark:bg-gradient-to-r from-[#04071d] to-[#0c0e23]  p-5 md:p-8 md:w-[40vw]  dark:border-zinc-700 "
             key={item.name}
           >
             <blockquote>
@@ -101,10 +103,11 @@ export const InfiniteMovingCards = ({
               <span className="relative z-20 text-lg leading-[1.6] text-black dark:text-gray-400 font-normal font-sanstext-white">
                 {item.quote}
               </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
+
+              <div className="absolute bottom-6 z-20 mt-6 flex flex-row items-center">
                 <span className="flex justify-center items-center  gap-3 w-full">
-                  <Image
-                    src={meImage}
+                  <img
+                    src={item.img}
                     width={50}
                     height={50}
                     alt={item.name}

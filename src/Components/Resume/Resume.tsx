@@ -28,7 +28,7 @@ export function TimelineResume() {
               {" "}
               Aug 2024 - Dec 2024
             </span>
-            <p className="text-lg font-semibold">Route Academy</p>
+            <p className="text-lg font-semibold text-dark dark:text-white">Route Academy</p>
           </div>
 
           <div className="course flex flex-col gap-2">
@@ -36,7 +36,7 @@ export function TimelineResume() {
               <Cover>ICPC Participant</Cover>
             </h4>
             <span className="text-sm text-blue-400 py-1"> Aug 2024</span>
-            <p className="text-lg font-semibold">Egyptian Collegiate Programming Contest in ALX</p>
+            <p className="text-lg font-semibold text-dark dark:text-white">Egyptian Collegiate Programming Contest in ALX</p>
           </div>
         </div>
       ),
@@ -53,7 +53,7 @@ export function TimelineResume() {
               {" "}
               Oct 2022 - Oct 2026
             </span>
-            <p className="text-lg font-semibold">
+            <p className="text-lg text-dark dark:text-white font-semibold">
               Higher Technological Institute 
             </p>
             <span className="text-sm text-gray-400">10th of Ramadan City</span>

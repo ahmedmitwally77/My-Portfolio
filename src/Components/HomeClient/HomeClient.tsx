@@ -55,8 +55,8 @@ export default function HomeClient() {
         <Approach />
         <Footer />
       </div>
-        <ShootingStars />
-        <StarsBackground />
+      <ShootingStars />
+      <StarsBackground />
     </div>
   );
 }
