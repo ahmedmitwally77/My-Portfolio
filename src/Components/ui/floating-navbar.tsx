@@ -73,7 +73,7 @@ export const FloatingNav = ({
             idx: number
           ) => (
             <Link
-            aria-label={`${name} button`}
+            aria-label={`button`}
               key={`link=${idx}`}
               href={`${navItem.link}`}
               className={cn(
