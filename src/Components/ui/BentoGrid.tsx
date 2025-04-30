@@ -30,8 +30,7 @@ export const BentoGrid = ({
   );
 };
 
-export const BentoGridItem = (
-  {
+export const BentoGridItem = ({
   className,
   title,
   description,
@@ -95,14 +94,15 @@ export const BentoGridItem = (
         <div className="w-full h-full absolute ">
           {img && (
             <Image
-              src={img}
-              alt={`${img}`}
-              className={cn(
-                imgClassName,
-                "object-cover object-center w-full h-full"
-              )}
-              width={220}
-              height={220}
+            src={img}
+            alt={`${title} image`}
+            className={cn(
+              imgClassName,
+              "object-cover object-center w-full h-full"
+            )}
+            width={220}
+            height={220}
+            loading="lazy"
             />
           )}
         </div>
@@ -114,10 +114,11 @@ export const BentoGridItem = (
           {spareImg && (
             <Image
               src={spareImg}
-              alt={spareImg}
+              alt={`${title} spare image`}
               width={220}
               height={220}
               className="object-cover object-center w-full h-full"
+              loading="lazy"
             />
           )}
         </div>
@@ -204,7 +205,6 @@ export const BentoGridItem = (
           />
         </div>
       )}
-      
     </div>
   );
 };

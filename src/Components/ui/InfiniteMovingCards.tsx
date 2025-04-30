@@ -107,6 +107,7 @@ export const InfiniteMovingCards = ({
               <div className="absolute bottom-6 z-20 mt-6 flex flex-row items-center">
                 <span className="flex justify-center items-center  gap-3 w-full">
                   <img
+                    loading="lazy"
                     src={item.img}
                     width={50}
                     height={50}

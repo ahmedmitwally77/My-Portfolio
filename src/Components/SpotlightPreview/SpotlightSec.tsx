@@ -43,6 +43,7 @@ export function SpotlightPreview() {
           width={0}
           height={0}
           className="rounded-full  w-[200px] h-[200px] object-cover"
+          loading="lazy"
         />
         <h1 className="text-center relative md:tracking-wider dark:text-white text-black my-2 text-sm md:text-lg lg:text-2xl">
           Hi! I&apos;m Ahmed Mitwally,a professional
@@ -65,8 +66,8 @@ export function SpotlightPreview() {
             />
           </a>
 
-          <a  href="https://drive.google.com/uc?export=download&id=1HStSBYUIZ_dgB7XM0cgO9AECSRekjUm_"  target="_blank" download="Ahmed Mitwally CV">
-            <MagicButton
+          <a href="https://drive.google.com/uc?export=download&id=1fiRJXEdGwjqBp82P_JVHA3JLPFq6lkBB" download="Ahmed Mitwally Essa CV">
+          <MagicButton
               title="Download CV"
               icon={ <RiFolderUserLine />}
               position="right"

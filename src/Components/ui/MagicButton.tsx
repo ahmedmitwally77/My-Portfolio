@@ -18,6 +18,7 @@ const MagicButton = ({
       className="relative  dark:text-white text-black inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] 
                 focus:outline-none transition-transform duration-300 hover:scale-105"
       onClick={handleClick}
+      aria-label={`${title} button`}
     >
       <span
         className="absolute dark:text-white text-black inset-[-1000%] animate-[spin_0.3s_linear_infinite] 

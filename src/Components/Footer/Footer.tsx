@@ -6,6 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import MagicButton from "../ui/MagicButton";
 import { socialMedia } from "../../../data";
+import { ShootingStars } from "../ui/shooting-stars";
 
 const Footer = () => {
   return (
@@ -27,6 +28,7 @@ const Footer = () => {
           responsive, and scalable web solutions.
         </p>
         <Link
+        aria-label="go to my gmail"
           href="https://mail.google.com/mail/?view=cm&fs=1&to=ahmed.mitwally.essa@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
@@ -46,6 +48,7 @@ const Footer = () => {
         <div className="flex items-center md:gap-3 gap-6">
           {socialMedia.map((info) => (
             <Link
+            aria-label={`social media links`}
               href={info.link}
               target="_blank"
               key={info.id}
@@ -64,6 +67,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
+      <ShootingStars />
     </footer>
   );
 };

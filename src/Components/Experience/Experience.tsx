@@ -15,7 +15,7 @@ export default function Experience() {
       <div className="cards md:w-4/5 mx-auto mt-12 grid justify-center md:grid-cols-2 grid-cols-1 gap-8">
         {workExperience.map((exp, index) => (
           <BorderButton
-          borderClassName="bg-purple-400"
+            borderClassName="bg-purple-400"
             borderRadius="1.75rem"
             duration={Math.floor(Math.random() * 10000) + 1000}
             className="flex-1 dark:text-white  dark:bg-transparent bg-gray-100 text-black border border-slate-200 dark:border-slate-800 "
@@ -28,6 +28,7 @@ export default function Experience() {
                 alt={exp.title}
                 width={0}
                 height={0}
+                loading="lazy"
               ></Image>
               <div className="text lg:ms-5 md:text-start">
                 <h4 className="font-semibold text-lg mx-auto md:mx-0 font-serif dark:text-slate-100 text-slate-900">

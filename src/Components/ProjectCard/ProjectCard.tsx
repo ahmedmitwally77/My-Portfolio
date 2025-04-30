@@ -26,6 +26,7 @@ export function ProjectCard({
             width={300}
             height={200}
             className="w-full h-[250px] object-cover self-center object-center"
+            loading="lazy"
           />
         </div>
         <h3 className="max-w-xs !pb-4 !m-0 font-bold text-base text-slate-900 dark:text-slate-100">
