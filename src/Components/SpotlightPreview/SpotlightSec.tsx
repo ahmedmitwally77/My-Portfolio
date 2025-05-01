@@ -10,7 +10,6 @@ import MagicButton from "../ui/MagicButton";
 import { RiFolderUserLine } from "react-icons/ri";
 import { motion } from "framer-motion";
 
-
 export function SpotlightPreview() {
   return (
     <motion.div
@@ -72,8 +71,10 @@ export function SpotlightPreview() {
           </a>
 
           <a
-            href="https://drive.google.com/uc?export=download&id=1fiRJXEdGwjqBp82P_JVHA3JLPFq6lkBB"
+            href="https://drive.google.com/uc?export=download&id=11EGFqgGBiOEStAbxuGD6bh9B9X-81bEp"
             download="Ahmed Mitwally Essa CV"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <MagicButton
               title="Download CV"

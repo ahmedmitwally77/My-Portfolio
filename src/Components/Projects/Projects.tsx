@@ -30,7 +30,7 @@ export default function Projects() {
   const allProducts = projects;
   const sectionRef = useRef<HTMLElement | null>(null);
 
-  const [products, setProducts] = useState(projects.slice(0, 3));
+  const [products, setProducts] = useState(projects.slice(0, 6));
   const [loading, setLoading] = useState(false);
   const [activePage, setActivePage] = useState(1);
 
@@ -45,7 +45,6 @@ export default function Projects() {
   }) {
     setLoading(true);
     setActivePage(page);
-
     setTimeout(() => {
       setProducts(allProducts.slice(start, end));
       setLoading(false);
@@ -92,15 +91,15 @@ export default function Projects() {
       )}
 
       <div className="pagination flex gap-3 mt-32 justify-center">
-        {[1, 2].map((page) => (
+        {[1, 2,3].map((page) => (
           <span
             key={page}
             className={`p-3 rounded-full w-6 h-6 flex justify-center items-center cursor-pointer 
               ${activePage === page ? "bg-purple-500 text-white" : "bg-gray-700 dark:bg-white dark:text-black"}`}
             onClick={() =>
               handleClick({
-                start: (page - 1) * 3,
-                end: page === 2 ? 7 : page * 3,
+                start: (page - 1) * 6,
+                end: page * 6,
                 page,
               })
             }

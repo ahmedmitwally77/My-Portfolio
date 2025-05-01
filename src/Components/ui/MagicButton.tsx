@@ -15,7 +15,7 @@ const MagicButton = ({
 }) => {
   return (
     <button
-      className="relative  dark:text-white text-black inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] 
+      className="relative cursor-pointer  dark:text-white text-black inline-flex h-12 w-full md:w-60 md:mt-10 overflow-hidden rounded-lg p-[1px] 
                 focus:outline-none transition-transform duration-300 hover:scale-105"
       onClick={handleClick}
       aria-label={`${title} button`}
