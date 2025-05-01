@@ -2,7 +2,7 @@ import React from "react";
 import { InfiniteMovingCards } from "../ui/InfiniteMovingCards";
 import { testimonials } from "../../../data";
 import MainHeading from "../MainHeading/MainHeading";
-
+import { motion } from "framer-motion";
 
 export default function Testimonials() {
   return (
@@ -12,10 +12,15 @@ export default function Testimonials() {
         <MainHeading title="Satisfied Clients" />
       </h3>
 
-
-      <div className="testimonials">
+      <motion.div
+        initial={{ opacity: 0, rotate: -10 }}
+        whileInView={{ opacity: 1, rotate: 0 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="testimonials"
+      >
         <InfiniteMovingCards items={testimonials} />
-      </div>
+      </motion.div>
     </section>
   );
 }

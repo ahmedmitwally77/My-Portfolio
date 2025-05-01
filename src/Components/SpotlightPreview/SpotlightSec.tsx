@@ -8,11 +8,16 @@ import HeroTyping from "../HeroTypeing/HeroTypeing";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
 import MagicButton from "../ui/MagicButton";
 import { RiFolderUserLine } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 
 export function SpotlightPreview() {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: 50 }} // يبدأ من تحت وشفاف
+      whileInView={{ opacity: 1, y: 0 }} // يظهر ويطلع مكانه
+      transition={{ duration: 0.7, ease: "easeOut" }}
+      viewport={{ once: true, amount: 0.3 }} // يحصل مرة واحدة، لما 30% من العنصر يظهر
       // className="relative px-2 md:px-4 dark:text-white text-black flex h-full w-full overflow-hidden rounded-md  after:absolute dark:after:bg-[linear-gradient(to_bottom,rgba(0,0,0,0.2),rgba(0,3,25,0.6))] after:w-full after:h-full  antialiased md:items-center justify-center"
       className="relative px-2 md:px-4 dark:text-white text-black flex h-full w-full overflow-hidden rounded-md   antialiased md:items-center justify-center"
     >
@@ -58,7 +63,7 @@ export function SpotlightPreview() {
         </p>
 
         <div className="flex flex-col md:flex-row gap-4 mt-8 md:mt-4">
-          <a  href="#projects">
+          <a href="#projects">
             <MagicButton
               title="Show my work"
               icon={<FaLocationArrow />}
@@ -66,16 +71,19 @@ export function SpotlightPreview() {
             />
           </a>
 
-          <a href="https://drive.google.com/uc?export=download&id=1fiRJXEdGwjqBp82P_JVHA3JLPFq6lkBB" download="Ahmed Mitwally Essa CV">
-          <MagicButton
+          <a
+            href="https://drive.google.com/uc?export=download&id=1fiRJXEdGwjqBp82P_JVHA3JLPFq6lkBB"
+            download="Ahmed Mitwally Essa CV"
+          >
+            <MagicButton
               title="Download CV"
-              icon={ <RiFolderUserLine />}
+              icon={<RiFolderUserLine />}
               position="right"
             />
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

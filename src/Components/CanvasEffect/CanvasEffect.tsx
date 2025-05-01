@@ -9,7 +9,13 @@ import { BorderButton } from "../ui/MovingBorder";
 export function CanvasRevealEffectDemo() {
   return (
     <>
-      <div className="py-20 lg:space-y-0 space-y-8 space-x-0 lg:space-x-6 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-8">
+      <motion.div
+        initial={{ opacity: 0, x: -80 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="py-20 lg:space-y-0 space-y-8 space-x-0 lg:space-x-6 flex flex-col lg:flex-row items-center justify-center w-full gap-4 mx-auto px-8"
+      >
         <Card
           title="Planning & Strategy"
           pargraph="We start by defining project goals, target users, and key features. I focus on user experience, ensuring a smooth and scalable structure before diving into development."
@@ -66,7 +72,7 @@ export function CanvasRevealEffectDemo() {
             colors={[[125, 211, 252]]}
           />
         </Card>
-      </div>
+      </motion.div>
     </>
   );
 }

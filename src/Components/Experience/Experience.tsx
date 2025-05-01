@@ -3,7 +3,7 @@ import { workExperience } from "../../../data";
 import { BorderButton } from "../ui/MovingBorder";
 import Image from "next/image";
 import MainHeading from "../MainHeading/MainHeading";
-
+import { motion } from "framer-motion";
 export default function Experience() {
   return (
     <section id="experience" className="md:py-20 py-12 px-4  md:px-8">
@@ -12,7 +12,13 @@ export default function Experience() {
         <MainHeading title="Work Experience" />
       </h3>
 
-      <div className="cards md:w-4/5 mx-auto mt-12 grid justify-center md:grid-cols-2 grid-cols-1 gap-8">
+      <motion.div
+        initial={{ opacity: 0, x: 100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="cards md:w-4/5 mx-auto mt-12 grid justify-center md:grid-cols-2 grid-cols-1 gap-8"
+      >
         {workExperience.map((exp, index) => (
           <BorderButton
             borderClassName="bg-purple-400"
@@ -41,7 +47,7 @@ export default function Experience() {
             </div>
           </BorderButton>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

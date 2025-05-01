@@ -9,6 +9,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import { useState } from "react";
 import Lottie from "react-lottie";
 import animationData from "../../../data/confetti.json";
+import { motion } from "framer-motion";
 
 export const BentoGrid = ({
   className,
@@ -71,7 +72,11 @@ export const BentoGridItem = ({
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ scale: 0.8, opacity: 0 }}
+      whileInView={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
       id={id.toString()}
       className={cn(
         // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative
@@ -94,15 +99,15 @@ export const BentoGridItem = ({
         <div className="w-full h-full absolute ">
           {img && (
             <Image
-            src={img}
-            alt={`${title} image`}
-            className={cn(
-              imgClassName,
-              "object-cover object-center w-full h-full"
-            )}
-            width={220}
-            height={220}
-            loading="lazy"
+              src={img}
+              alt={`${title} image`}
+              className={cn(
+                imgClassName,
+                "object-cover object-center w-full h-full"
+              )}
+              width={220}
+              height={220}
+              loading="lazy"
             />
           )}
         </div>
@@ -205,6 +210,6 @@ export const BentoGridItem = ({
           />
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };

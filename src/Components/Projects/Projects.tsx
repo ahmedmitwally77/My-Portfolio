@@ -1,19 +1,61 @@
-"use client"
-import React, { useState } from "react";
+"use client";
+import React, { useState, useRef } from "react";
 import { projects } from "../../../data";
 import { ProjectCard } from "../ProjectCard/ProjectCard";
 import MainHeading from "../MainHeading/MainHeading";
 import { IconType } from "react-icons/lib";
+import { motion } from "framer-motion";
+import { ClimbingBoxLoader } from "react-spinners";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 60 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: "easeOut" },
+  },
+};
 
 export default function Projects() {
-  const allProducts=projects
-  const [products, setProducts] = useState(projects.slice(0,3))
-  function handleClick({start,end}:{start:number,end:number}){
-    setProducts(allProducts.slice(start,end))
+  const allProducts = projects;
+  const sectionRef = useRef<HTMLElement | null>(null);
+
+  const [products, setProducts] = useState(projects.slice(0, 3));
+  const [loading, setLoading] = useState(false);
+  const [activePage, setActivePage] = useState(1);
+
+  function handleClick({
+    start,
+    end,
+    page,
+  }: {
+    start: number;
+    end: number;
+    page: number;
+  }) {
+    setLoading(true);
+    setActivePage(page);
+
+    setTimeout(() => {
+      setProducts(allProducts.slice(start, end));
+      setLoading(false);
+      sectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 600);
   }
+
   return (
-    <section id="projects" className="py-8 px-8">
-      <h3 className="heading text-center text-xl dark:text-white text-black  md:text-3xl tracking-wide font-semibold font-sans">
+    <section ref={sectionRef} id="projects" className="py-8 px-8">
+      <h3 className="heading text-center text-xl dark:text-white text-black md:text-3xl tracking-wide font-semibold font-sans">
         A Small Selections of
         <span className="text-purple-300">
           {" "}
@@ -21,23 +63,51 @@ export default function Projects() {
         </span>
       </h3>
 
-      <div className="project-cards flex flex-wrap justify-center items-center gap-8 gap-y-52 mt-32">
-        {products.map(
-          (project: {
-            id: number;
-            title: string;
-            des: string;
-            img: string;
-            iconLists: IconType[]; // أو React.ComponentType[]
-            link: string;
-          }) => (
-            <ProjectCard key={`project-${project.id}`} data={project} />
-          )
-        )}
-      </div>
-      <div className="pagination flex gap-3  mt-32 justify-center">
-        <span className="dark:bg-white bg-gray-700 p-3 rounded-full dark:text-black w-6 h-6 flex justify-center items-center cursor-pointer" onClick={()=>handleClick({start:0,end:3})}>1</span>
-        <span className="dark:bg-white p-3 bg-gray-700 rounded-full dark:text-black w-6 h-6 flex justify-center items-center cursor-pointer" onClick={()=>handleClick({start:3,end:7})}>2</span>
+      {loading ? (
+        <div className="flex justify-center items-center mx-auto mt-32 mb-32">
+          <ClimbingBoxLoader color="#4F46E5"/>
+        </div>
+      ) : (
+        <motion.div
+          className="project-cards flex flex-wrap justify-center items-center gap-8 gap-y-52 mt-32"
+          variants={containerVariants}
+          initial="hidden"
+          animate="show"
+        >
+          {products.map(
+            (project: {
+              id: number;
+              title: string;
+              des: string;
+              img: string;
+              iconLists: IconType[];
+              link: string;
+            }) => (
+              <motion.div key={`project-${project.id}`} variants={cardVariants}>
+                <ProjectCard data={project} />
+              </motion.div>
+            )
+          )}
+        </motion.div>
+      )}
+
+      <div className="pagination flex gap-3 mt-32 justify-center">
+        {[1, 2].map((page) => (
+          <span
+            key={page}
+            className={`p-3 rounded-full w-6 h-6 flex justify-center items-center cursor-pointer 
+              ${activePage === page ? "bg-purple-500 text-white" : "bg-gray-700 dark:bg-white dark:text-black"}`}
+            onClick={() =>
+              handleClick({
+                start: (page - 1) * 3,
+                end: page === 2 ? 7 : page * 3,
+                page,
+              })
+            }
+          >
+            {page}
+          </span>
+        ))}
       </div>
     </section>
   );
