@@ -71,7 +71,7 @@ export function SpotlightPreview() {
           </a>
 
           <a
-            href="https://drive.google.com/uc?export=download&id=11EGFqgGBiOEStAbxuGD6bh9B9X-81bEp"
+            href="https://drive.google.com/uc?export=download&id=1rg_phWeV3Pp10XzruvKjn4OMJ-aJPXhK"
             download="Ahmed Mitwally Essa CV"
             target="_blank"
             rel="noopener noreferrer"
