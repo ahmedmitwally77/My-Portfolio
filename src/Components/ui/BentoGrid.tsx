@@ -11,6 +11,21 @@ import Lottie from "react-lottie";
 import animationData from "../../../data/confetti.json";
 import { motion } from "framer-motion";
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.3, // تأخير متدرج بين العناصر الأبناء
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.8 },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
+
 export const BentoGrid = ({
   className,
   children,
@@ -19,15 +34,19 @@ export const BentoGrid = ({
   children?: React.ReactNode;
 }) => {
   return (
-    <div
+    <motion.div
       className={cn(
         // change gap-4 to gap-8, change grid-cols-3 to grid-cols-5, remove md:auto-rows-[18rem], add responsive code
         "mx-auto grid max-w-7xl grid-cols-1 gap-4 lg:gap-8  md:grid-cols-6 lg:grid-cols-5 md:grid-row-8",
         className
       )}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 
@@ -73,10 +92,8 @@ export const BentoGridItem = ({
 
   return (
     <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
-      whileInView={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.5 }}
       viewport={{ once: true }}
+      variants={itemVariants} // استخدام التأثير التدريجي للعناصر
       id={id.toString()}
       className={cn(
         // remove p-4 rounded-3xl dark:bg-black dark:border-white/[0.2] bg-white  border border-transparent, add border border-white/[0.1] overflow-hidden relative

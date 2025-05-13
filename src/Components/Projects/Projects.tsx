@@ -12,17 +12,20 @@ const containerVariants = {
   show: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.2,
+      duration: 0.5,
+      ease: "easeOut",
+      when: "beforeChildren",
+      staggerChildren: 0.5,
     },
   },
 };
 
 const cardVariants = {
-  hidden: { opacity: 0, y: 60 },
+  hidden: { opacity: 0, y: -200 },
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.8, ease: "easeOut" },
   },
 };
 
@@ -53,7 +56,7 @@ export default function Projects() {
   }
 
   return (
-    <section ref={sectionRef} id="projects" className="py-8 px-8">
+    <section ref={sectionRef}  id="projects" className="py-8 px-8">
       <h3 className="heading text-center text-xl dark:text-white text-black md:text-3xl tracking-wide font-semibold font-sans">
         A Small Selections of
         <span className="text-purple-300">
@@ -71,7 +74,7 @@ export default function Projects() {
           className="project-cards flex flex-wrap justify-center items-center gap-8 gap-y-52 mt-32"
           variants={containerVariants}
           initial="hidden"
-          animate="show"
+          whileInView="show"
         >
           {products.map(
             (project: {

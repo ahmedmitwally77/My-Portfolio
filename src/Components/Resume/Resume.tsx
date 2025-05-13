@@ -1,6 +1,7 @@
 import React from "react";
 import { Timeline } from "../../Components/ui/timeline";
 import { Cover } from "../ui/cover";
+import { motion } from "framer-motion";
 
 export function TimelineResume() {
   const data = [
@@ -67,8 +68,14 @@ export function TimelineResume() {
     },
   ];
   return (
-    <div className="relative w-full overflow-clip">
+    <motion.div
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      viewport={{ once: true }}
+      id="resume"
+    className="relative w-full overflow-clip">
       <Timeline data={data} />
-    </div>
+    </motion.div>
   );
 }
