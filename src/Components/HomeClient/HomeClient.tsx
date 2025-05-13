@@ -1,47 +1,131 @@
 "use client";
 import dynamic from "next/dynamic";
-import Projects from "../Projects/Projects";
-import Hero from "../Hero/Hero";
-import Testimonials from "../Testimonials/Testimonials";
-import Experience from "../Experience/Experience";
-import Approach from "../Approach/Approach";
-import Footer from "../Footer/Footer";
-import { ShootingStars } from "../ui/shooting-stars";
-import { StarsBackground } from "../ui/stars-background";
-import { useEffect, useState } from "react";
+import { useEffect, useState, memo } from "react";
 import WelcomeScreen from "../WelcomePage/WelcomePage";
-import { TimelineResume } from "../Resume/Resume";
+import { useCallback } from "react";
+import SecLoading from "../SecLoading/SecLoading";
 
-const Grid = dynamic(() => import("@/Components/Grid/Grid"), { ssr: false });
+const Projects = dynamic(() => import("../Projects/Projects"), {
+  loading: () => (
+    <div className="h-screen flex items-center justify-center">
+      <SecLoading />
+    </div>
+  ),
+  ssr: true,
+});
+
+const Hero = dynamic(() => import("../Hero/Hero"), {
+  loading: () => (
+    <div className="h-screen flex items-center justify-center">
+      <SecLoading />
+    </div>
+  ),
+  ssr: true,
+});
+
+const Testimonials = dynamic(() => import("../Testimonials/Testimonials"), {
+  loading: () => (
+    <div className="h-screen flex items-center justify-center">
+      <SecLoading />
+    </div>
+  ),
+  ssr: true,
+});
+
+const Experience = dynamic(() => import("../Experience/Experience"), {
+  loading: () => (
+    <div className="h-screen flex items-center justify-center">
+      <SecLoading />
+    </div>
+  ),
+  ssr: true,
+});
+
+const Approach = dynamic(() => import("../Approach/Approach"), {
+  loading: () => (
+    <div className="h-screen flex items-center justify-center">
+      <SecLoading />
+    </div>
+  ),
+  ssr: true,
+});
+
+const Footer = dynamic(() => import("../Footer/Footer"), {
+  loading: () => (
+    <div className="h-screen flex items-center justify-center">
+      <SecLoading />
+    </div>
+  ),
+  ssr: true,
+});
+
+const Grid = dynamic(() => import("@/Components/Grid/Grid"), {
+  loading: () => (
+    <div className="h-screen flex items-center justify-center">
+      <SecLoading />
+    </div>
+  ),
+  ssr: false,
+});
+
+const TimelineResume = dynamic(
+  () => import("../Resume/Resume").then((mod) => mod.TimelineResume),
+  {
+    loading: () => (
+      <div className="h-screen flex items-center justify-center">
+        <SecLoading />
+      </div>
+    ),
+    ssr: true,
+  }
+);
+
+const ShootingStars = dynamic(
+  () => import("../ui/shooting-stars").then((mod) => mod.ShootingStars),
+  {
+    ssr: false,
+  }
+);
+
+const StarsBackground = dynamic(
+  () => import("../ui/stars-background").then((mod) => mod.StarsBackground),
+  {
+    ssr: false,
+  }
+);
+
+const LoadingComponent = memo(() => (
+  <div className="flex justify-center  fixed items-center h-screen w-full flex-col gap-4">
+    <WelcomeScreen />
+  </div>
+));
+
+LoadingComponent.displayName = "LoadingComponent";
 
 export default function HomeClient() {
   const [loading, setLoading] = useState(true);
+  const [mounted, setMounted] = useState(false);
+
+  const handleLoad = useCallback(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 4000);
+  }, []);
 
   useEffect(() => {
-    const handleLoad = () => {
-      setTimeout(() => {
-        setLoading(false);
-      }, 3000);
-    };
+    setMounted(true);
 
     if (document.readyState === "complete") {
-      // لو الصفحة كلها محملة خلاص
       handleLoad();
     } else {
-      // لو لسه في تحميل، استنى الحدث
       window.addEventListener("load", handleLoad);
     }
 
     return () => window.removeEventListener("load", handleLoad);
-  }, []);
+  }, [handleLoad]);
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen w-full flex-col gap-4">
-        <WelcomeScreen />
-      </div>
-    );
-  }
+  if (!mounted) return null;
+  if (loading) return <LoadingComponent />;
 
   return (
     <div className="w-full h-full text-white">
