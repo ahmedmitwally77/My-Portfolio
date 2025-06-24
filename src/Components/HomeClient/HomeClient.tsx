@@ -5,6 +5,7 @@ import WelcomeScreen from "../WelcomePage/WelcomePage";
 import { useCallback } from "react";
 import SecLoading from "../SecLoading/SecLoading";
 import SocialMedia from "../SocialMedia/SocialMedia";
+import ButtonToTop from "../ButtonToTop/ButtonToTop";
 
 const Projects = dynamic(() => import("../Projects/Projects"), {
   loading: () => (
@@ -140,6 +141,7 @@ export default function HomeClient() {
         <Approach />
         <Footer />
         <SocialMedia />
+        <ButtonToTop/>
       </div>
       <ShootingStars />
       <StarsBackground />
