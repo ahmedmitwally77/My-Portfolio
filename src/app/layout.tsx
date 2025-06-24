@@ -61,7 +61,7 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <FloatingNav navItems={navItems} />
           </Suspense>{" "}
-          <main className="relative  dark:bg-main-100  w-full dark:text-white text-black flex flex-col justify-center items-center overflow-hidden mx-auto  ">
+          <main className="relative dark:bg-main-100  w-full dark:text-white text-black flex flex-col justify-center items-center overflow-hidden mx-auto  ">
             <Suspense fallback={<Loading/>}>{children}</Suspense>
           </main>
         </ThemeProvider>

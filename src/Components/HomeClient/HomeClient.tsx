@@ -4,6 +4,7 @@ import { useEffect, useState, memo } from "react";
 import WelcomeScreen from "../WelcomePage/WelcomePage";
 import { useCallback } from "react";
 import SecLoading from "../SecLoading/SecLoading";
+import SocialMedia from "../SocialMedia/SocialMedia";
 
 const Projects = dynamic(() => import("../Projects/Projects"), {
   loading: () => (
@@ -59,14 +60,14 @@ const Footer = dynamic(() => import("../Footer/Footer"), {
   ssr: true,
 });
 
-const Grid = dynamic(() => import("@/Components/Grid/Grid"), {
-  loading: () => (
-    <div className="h-screen flex items-center justify-center">
-      <SecLoading />
-    </div>
-  ),
-  ssr: false,
-});
+// const Grid = dynamic(() => import("@/Components/Grid/Grid"), {
+//   loading: () => (
+//     <div className="h-screen flex items-center justify-center">
+//       <SecLoading />
+//     </div>
+//   ),
+//   ssr: false,
+// });
 
 const TimelineResume = dynamic(
   () => import("../Resume/Resume").then((mod) => mod.TimelineResume),
@@ -131,13 +132,14 @@ export default function HomeClient() {
     <div className="w-full h-full text-white">
       <div className="relative z-[5]">
         <Hero />
-        <Grid />
+        {/* <Grid /> */}
         <Projects />
         <TimelineResume />
         <Testimonials />
         <Experience />
         <Approach />
         <Footer />
+        <SocialMedia />
       </div>
       <ShootingStars />
       <StarsBackground />

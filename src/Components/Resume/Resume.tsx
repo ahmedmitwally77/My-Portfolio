@@ -74,7 +74,7 @@ export function TimelineResume() {
       transition={{ duration: 0.5, delay: 0.2 }}
       viewport={{ once: true }}
       id="resume"
-    className="relative w-full overflow-clip">
+    className="relative w-full overflow-clip px-4 md:px-8 py-12 md:py-20">
       <Timeline data={data} />
     </motion.div>
   );

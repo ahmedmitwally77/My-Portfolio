@@ -71,7 +71,7 @@ export default function Projects() {
         </div>
       ) : (
         <motion.div
-          className="project-cards flex flex-wrap justify-center items-center gap-8 gap-y-52 mt-32"
+          className="project-cards flex flex-wrap justify-center items-center  gap-8 gap-y-52 mt-32"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"

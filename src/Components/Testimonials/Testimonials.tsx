@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="px-2 md:px-4">
+    <section id="testimonials" className="px-2 md:px-20 py-8 relative">
       <h3 className="heading py-18 text-center text-xl dark:text-white text-black  md:text-3xl tracking-wide font-semibold font-sans">
         Kind Words From
         <MainHeading title="Satisfied Clients" />
