@@ -56,7 +56,7 @@ export default function Projects() {
   }
 
   return (
-    <section ref={sectionRef}  id="projects" className="py-8 px-8">
+    <section ref={sectionRef}  id="projects" className="py-8 px-4 sm:px-8 max-w-7xl mx-auto overflow-x-hidden">
       <h3 className="heading text-center text-xl dark:text-white text-black md:text-3xl tracking-wide font-semibold font-sans">
         A Small Selections of
         <span className="text-purple-300">
@@ -71,7 +71,7 @@ export default function Projects() {
         </div>
       ) : (
         <motion.div
-          className="project-cards flex flex-wrap justify-center items-center  gap-8 gap-y-52 mt-32"
+  className="project-cards w-full max-w-7xl mx-auto flex flex-wrap justify-center items-center gap-8 gap-y-52 mt-32"
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
